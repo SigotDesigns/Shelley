@@ -1,0 +1,440 @@
+// ARE Quest One Page Scrolling Website
+
+// CUSTOM IMPORTS
+@import "partials/_functions";
+@import "partials/_variables";
+@import "partials/_mixins";
+
+// VENDOR IMPORTS
+@import "vendor/bootstrap/bootstrap";
+
+// HOUSEKEEPING
+
+* {
+  box-sizing: border-box;
+}
+
+// END HOUSEKEEPING
+
+body {
+  font-family: $body-font;
+  margin: calc-rem(0);
+  color: $dark-text;
+  padding-top: calc-rem(0);
+  h2 {
+    color: $logo-blue-color;
+    text-align: center;
+    margin: auto;
+    padding: calc-rem(60) calc-rem(40);
+    font-size: calc-rem(38);
+    font-weight: bold;
+    @include media-breakpoint-down(sm) {
+      font-size: calc-rem(24);
+    }
+  }
+  h3 {
+    font-size: calc-rem(20);
+    font-weight: bold;
+    @include media-breakpoint-down(sm) {
+      font-size: calc-rem(18);
+    }
+  }
+  p {
+    font-size: $body-size;
+  }
+  .body-container {
+    background-image: url(../images/pinkfog.jpg);
+  	background-repeat: no-repeat;
+  	background-size: 100%;
+  	background-attachment: fixed;
+  	max-width: 100%;
+  	margin: auto;
+   	background-color:rgba(255,255,255,0.8);
+  }
+  .body-text {
+    background-color:rgba(255,255,255,0.6);
+  }
+  .largertext {
+    font-size: calc-rem(22);
+    color: $logo-blue-color;
+  }
+  .whitelink {
+    color: white;
+  }
+  #feestarget {
+    padding-top: 70px;
+  }
+}
+
+main {
+  display: block;
+  color: $light-text;
+  h1 {
+    padding: calc-rem(40);
+    text-align: center;
+    font-size: $h1-fontsize;
+    font-family: 'Great Vibes', cursive;
+    max-width: 100%;
+    position: absolute;
+    right: 40%;
+    // margin-right: 10%;
+    // margin-left: 40%;
+    // transform: translateX(40%);
+    top: 45%;
+    @include media-breakpoint-down(lg) {
+      // color: black;
+      // font-weight: bold;
+      // text-shadow: calc-rem(1) calc-rem(1) white;
+      font-size: $h1-large-fontsize;
+      // position: absolute;
+      // padding-left: 0;
+      // padding-right: 0;
+      // left: 0%;
+      // margin-left: 0%;
+      // transform: translateX(30%);
+      // top: 80%;
+    }
+    @include media-breakpoint-down(md) {
+      // color: black;
+      // font-weight: bold;
+      // text-shadow: calc-rem(1) calc-rem(1) white;
+      font-size: $h1-medium-fontsize;
+      position: absolute;
+      padding-left: 0;
+      padding-right: 0;
+      left: 20%;
+      margin-left: 0%;
+      transform: translateX(35%);
+      top: 80%;
+    }
+    @include media-breakpoint-down(sm) {
+      // color: black;
+      // font-weight: bold;
+      // text-shadow: calc-rem(1) calc-rem(1) white;
+      font-size: $h1-smaller-fontsize;
+      position: absolute;
+      padding-left: 0;
+      padding-right: 0;
+      left: 20%;
+      margin-left: 0%;
+      transform: translateX(35%);
+      top: 80%;
+    }
+  }
+}
+
+
+header {
+  @include header-footer;
+  color: $links-color;
+  background-color: $header-background;
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  .logo {
+    padding-left: 10px;
+  }
+  .navbar-nav {
+    align-items: flex-end;
+  }
+  li {
+    display: inline-block;
+    font-size: $nav-fontsize;
+    padding: calc-rem(0) calc-rem(0);
+    text-align: center;
+    a {
+      color: $links-color;
+    }
+  }
+  .active, .btn:hover {
+  color: $logo-blue-color;
+  }
+  .navbar-collapse {
+    a {
+    background-color: white;
+    width: 200px;
+    }
+  }
+}
+
+// SETS HREF POSITION FOR NAV LINKS
+.anchor {
+  display: block;
+  padding-top: 100px;
+  margin-top: -100px;
+}
+
+// LARGE SCREEN WIDTH HEADER IMAGES
+
+.content-wrapper {
+  max-width: 100%;
+  margin: auto;
+  min-height: 80vh;
+  font-size: $body-size;
+
+  .home-image {
+    background-image: url("../images/shelley.jpg");
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+    // padding: calc-rem(400) 0 calc-rem(100) 0;
+    // min-height: calc-rem(600);
+    background-repeat: no-repeat;
+    padding-top: 100px;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    @include media-breakpoint-down(md){
+      background: url("../images/shelley-smscreen.jpg");
+      background-size: cover;
+      background-position: center center;
+      // background-attachment: fixed;
+      background-repeat: no-repeat;
+      padding-top: 100px;
+      height: 100vh;
+      width: 100%;
+      // position: relative;
+    }
+    @include media-breakpoint-down(sm){
+      background: url("../images/shelley-smscreen.jpg");
+      background-size: cover;
+      background-position: center center;
+      // background-attachment: fixed;
+      background-repeat: no-repeat;
+      padding-top: 100px;
+      height: 100vh;
+      width: 100%;
+      // position: relative;
+    }
+    @include media-breakpoint-down(xs){
+      background: url("../images/shelley-smscreen.jpg");
+      background-size: cover;
+      background-position: center center;
+      // background-attachment: fixed;
+      background-repeat: no-repeat;
+      padding-top: 100px;
+      height: 100vh;
+      width: 100%;
+      // position: relative;
+    }
+  }
+
+  .individual-image {
+    background-image: url("../images/individual.jpg");
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+    // padding: calc-rem(400) 0 calc-rem(100) 0;
+    min-height: calc-rem(600);
+    position: relative;
+    @include media-breakpoint-down(md){
+      // min-height: calc-rem(600);
+      background-image: url("../images/individual.jpg");
+    }
+  }
+
+  .group-image {
+    background-image: url("../images/groupheader.jpg");
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+    // padding: calc-rem(400) 0 calc-rem(100) 0;
+    min-height: calc-rem(600);
+    position: relative;
+    @include media-breakpoint-down(sm){
+      min-height: calc-rem(600);
+    }
+  }
+
+  .about-image {
+    background-image: url("../images/about.jpg");
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+    // padding: calc-rem(400) 0 calc-rem(100) 0;
+    min-height: calc-rem(600);
+    position: relative;
+    @include media-breakpoint-down(sm){
+      min-height: calc-rem(600);
+    }
+  }
+
+  .contact-image {
+    background-image: url("../images/about.jpg");
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+    // padding: calc-rem(400) 0 calc-rem(100) 0;
+    min-height: calc-rem(600);
+    position: relative;
+    @include media-breakpoint-down(sm){
+    min-height: calc-rem(600);
+    }
+  }
+}
+
+
+#color-accessibility {
+    background-color: rgba(55, 94, 143, 0.8);
+    width: 100%;
+    height: auto;
+    // new code above
+}
+
+
+// SERVICES SECTION ON HOME PAGE
+
+.services-container {
+  padding: calc-rem(40) 0 calc-rem(100) 0;
+    h3 {
+      padding-top: calc-rem(50);
+    }
+    p {
+      text-align: left;
+      padding: calc-rem(40);
+      font-size: $body-size;
+      // @include media-breakpoint-down(sm) {
+      //   font-size: $body-smallsize;
+      // }
+    }
+    img {
+      border: 1px solid lightgrey;
+    //   box-shadow: 0 4px 24px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+  .service1,
+  .service2,
+  .service3,
+  .service4 {
+    padding: 10px;
+    // margin: 0 20px;
+  }
+}
+
+// .myapproach {
+//   p {
+//     @include media-breakpoint-down(sm) {
+//       font-size: $body-smallsize;
+//     }
+//   }
+// }
+
+// .cosmetic, .whitening, .implants, .oral, .dentures,  {
+//   padding: 30px 100px 30px 0;
+// }
+
+// OUR TEAM PAGE
+.team-container {
+  margin: auto;
+}
+.doctor {
+  padding: 0 200px;
+}
+.teamspacing {
+  padding: 30px 0;
+}
+.last-doctor {
+  padding-bottom: 80px;
+}
+
+// ABOUT PAGE
+.aboutus1 {
+  padding: calc-rem(20) calc-rem(0) calc-rem(100) calc-rem(0);
+}
+
+
+// FIND US SECTION
+
+.findus {
+  background-color: #eee;
+  .findus-container {
+    padding: calc-rem(40) 0 calc-rem(40) 0;
+    .findus-map {
+      margin-bottom: 50px;
+      padding-left: 100px;
+      iframe {
+        border: 2px solid $dark-text;
+        // @include media-breakpoint-down(sm) {
+        //   width: 50%;
+        // }
+      }
+    }
+    .findus-ceo {
+      padding: 0 calc-rem(50);
+      // @include media-breakpoint-down(sm) {
+      //   font-size: $body-smallsize;
+      // }
+      h3 {
+        text-align: center;
+        padding-bottom: calc-rem(20);
+      }
+      a {
+        color: $dark-text;
+      }
+    }
+  }
+}
+
+// CONTACT SECTION
+
+.contact1 {
+  margin: auto;
+  button {
+      margin: 30px;
+    }
+}
+
+// .contact {
+//   .bg-color-accessibility {
+//     background-color: rgba(40, 78, 127, 0.8);
+//     width: 100%;
+//     height: auto;
+//   }
+//   h2 {
+//     color: white;
+//     // padding: 20px 0;
+//   }
+//   .name-form {
+//     max-width: 60%;
+//     margin: auto;
+//     padding-bottom: calc-rem(30);
+//     color: white;
+//   }
+//   label {
+//     padding: 25px 0 0 0;
+//   }
+//   button {
+//     margin-top: 20px;
+//   }
+// }
+
+// FOOTER
+
+.footer {
+  @include header-footer;
+  font-family: $footer-font;
+  color: $light-text;
+  background-color: $footer-background;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  // margin-top: 149px;
+  padding: 0 0 calc-rem(10) 0;
+  font-size: $nav-fontsize;
+  p {
+    margin: calc-rem(-2);
+  }
+  .fontawesome-size {
+    font-size: calc-rem(30);
+  }
+  a {
+    color: $light-text;
+    // font-size: calc-rem(14);
+  }
+  @include media-breakpoint-down(sm) {
+    width: 100%;
+    height: calc-rem(100);
+    font-size: $body-smallsize;
+  }
+}

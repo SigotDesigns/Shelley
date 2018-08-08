@@ -1,0 +1,14 @@
+
+// MXINS
+
+@mixin header-footer {
+  width: 100%;
+  height: calc-rem(100);
+  margin: auto;
+}
+
+@mixin bkg-img-fix {
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-attachment: fixed;
+}
